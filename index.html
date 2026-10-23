@@ -1,0 +1,354 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcent</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #4CAF4F;
+            --color-text-neutral: #4D4D4D;
+            --color-text-neutral-gray: #717171;
+            --color-bg-silver: #F5F7FA;
+        }
+
+        @utility btn-primary {
+            @apply inline-flex items-center justify-center gap-2 cursor-pointer px-5 py-3 bg-primary rounded-md text-white hover:bg-[#3d9140] transition-all duration-300;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="sticky top-0 z-50">
+        <nav class="w-full bg-bg-silver relative">
+            <div class="max-w-screen-xl mx-auto">
+                <div class="navbar-inner flex items-center justify-between h-[84px] px-6">
+                    <a href="#hero-section" class="navbar-logo-link shrink-0">
+                        <img class="navbar-logo w-[154.49px] h-6" src="./assets/images/Logo.png" alt="Nexcent">
+                    </a>
+
+                    <ul class="hidden lg:flex items-center gap-8 text-[16px]">
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#hero-section">Home</a></li>
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#community-section">Service</a></li>
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#pixelgrade-section">Feature</a></li>
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#achievements-section">Products</a></li>
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#testimonial-section">Testimonials</a></li>
+                    </ul>
+
+                    <div class="hidden lg:flex items-center gap-6">
+                        <button class="cursor-pointer text-primary hover:text-black transition-all duration-300">Login</button>
+                        <button class="btn-primary">Sign Up</button>
+                    </div>
+
+                    <ul class="mobile-nav-menu hidden absolute z-10 bg-bg-silver w-full top-full left-0 lg:hidden flex-col gap-3 p-5 text-[16px] shadow-md">
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#hero-section">Home</a></li>
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#community-section">Service</a></li>
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#pixelgrade-section">Feature</a></li>
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#achievements-section">Products</a></li>
+                        <li class="hover:text-primary transition-colors duration-300"><a href="#testimonial-section">Testimonials</a></li>
+                        <li class="mobile-auth-buttons flex items-center gap-6">
+                            <button class="flex-1 cursor-pointer text-primary hover:text-black transition-all duration-300">Login</button>
+                            <button class="flex-1 btn-primary">Sign Up</button>
+                        </li>
+                    </ul>
+
+                    <button class="mobile-nav-button lg:hidden text-xl cursor-pointer" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero-section" class="w-full bg-bg-silver min-h-[599px]">
+            <div class="page-container h-full flex items-center">
+                <div class="hero-content w-full flex flex-col lg:flex-row gap-[50px] justify-between items-center">
+                    <div class="slider-container flex flex-col gap-7 items-center lg:items-start">
+                        <h1 class="text-center lg:text-left text-5xl md:text-[64px] font-semibold leading-[1.2]">
+                            <span class="text-text-neutral">Lessons and insights</span>
+                            <br>
+                            <span class="text-primary">from 8 years</span>
+                        </h1>
+                        <p class="hero-description text-text-neutral-gray text-center lg:text-left">
+                            Where to grow your business as a photographer: site or social media?
+                        </p>
+                        <button class="btn-primary">Register</button>
+                    </div>
+
+                    <div class="w-full lg:w-auto shrink-0">
+                        <img class="hero-image max-w-[391px] w-full" src="./assets/images/hero.png" alt="Nexcent hero illustration">
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-controllers w-full flex justify-center items-center gap-2 mt-8 lg:-mt-8">
+                <button aria-label="Slide 1" class="w-3 h-3 rounded-full bg-primary"></button>
+                <button aria-label="Slide 2" class="w-3 h-3 rounded-full bg-primary/40"></button>
+                <button aria-label="Slide 3" class="w-3 h-3 rounded-full bg-primary/40"></button>
+            </div>
+        </section>
+
+        <section id="clients-section" class="py-10">
+            <div class="page-container">
+                <h2 class="text-text-neutral text-4xl leading-[1.3] font-semibold text-center">Our Clients</h2>
+                <p class="clients-description text-[16px] text-text-neutral text-center mt-3">We have been working with some Fortune 500+ clients</p>
+                <div class="clients-logo-container flex justify-between flex-wrap"></div>
+            </div>
+        </section>
+
+        <section id="community-section" class="py-10">
+            <div class="page-container">
+                <div class="text-center max-w-[542px] mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-semibold text-text-neutral leading-tight md:leading-[44px]">
+                        Manage your entire community in a single system
+                    </h2>
+                    <p class="text-text-neutral-gray text-[16px] mt-3">Who is Nextcent suitable for?</p>
+                </div>
+
+                <div class="community-cards-container grid grid-cols-1 md:grid-cols-3 gap-8 mt-10"></div>
+            </div>
+        </section>
+
+        <section id="pixelgrade-section" class="py-12">
+            <div class="page-container">
+                <div class="feature-layout flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+                    <div class="w-full lg:w-1/2 flex justify-center">
+                        <img class="feature-image max-w-[440px] w-full h-auto object-contain" src="./assets/images/mobile-login.png" alt="The unseen of spending three years at Pixelgrade">
+                    </div>
+
+                    <div class="feature-content space-y-6 w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-semibold text-text-neutral leading-tight md:leading-[44px] max-w-[550px]">
+                            The unseen of spending three years at Pixelgrade
+                        </h2>
+                        <p class="feature-description text-text-neutral-gray text-sm md:text-[14px] leading-relaxed max-w-[580px]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.
+                        </p>
+                        <button class="btn-primary font-medium">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements-section" class="bg-bg-silver py-16">
+            <div class="page-container">
+                <div class="achievements-layout flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+                    <div class="achievements-heading w-full lg:w-1/2 text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-semibold leading-tight md:leading-[44px]">
+                            <span class="text-text-neutral">Helping a local</span>
+                            <br>
+                            <span class="text-primary">business reinvent itself</span>
+                        </h2>
+                        <p class="text-text-neutral-gray text-base mt-3">We reached here with our hard work and dedication</p>
+                    </div>
+
+                    <div class="achievements-stats w-full lg:w-1/2">
+                        <div class="stats-grid grid grid-cols-2 gap-y-10 gap-x-8">
+                            <div class="flex items-center gap-4">
+                                <img class="w-12 h-12 object-contain" src="./assets/icons/members.png" alt="Members">
+                                <div class="min-w-0">
+                                    <h3 class="text-2xl md:text-[28px] font-bold text-text-neutral leading-tight">2,245,341</h3>
+                                    <p class="text-text-neutral-gray text-sm md:text-base mt-1">Members</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <img class="w-12 h-12 object-contain" src="./assets/icons/clubs.png" alt="Clubs">
+                                <div class="min-w-0">
+                                    <h3 class="text-2xl md:text-[28px] font-bold text-text-neutral leading-tight">46,328</h3>
+                                    <p class="text-text-neutral-gray text-sm md:text-base mt-1">Clubs</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <img class="w-12 h-12 object-contain" src="./assets/icons/event-bookings.png" alt="Event Bookings">
+                                <div class="min-w-0">
+                                    <h3 class="text-2xl md:text-[28px] font-bold text-text-neutral leading-tight">828,867</h3>
+                                    <p class="text-text-neutral-gray text-sm md:text-base mt-1">Event Bookings</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <img class="w-12 h-12 object-contain" src="./assets/icons/payments.png" alt="Payments">
+                                <div class="min-w-0">
+                                    <h3 class="text-2xl md:text-[28px] font-bold text-text-neutral leading-tight">1,926,436</h3>
+                                    <p class="text-text-neutral-gray text-sm md:text-base mt-1">Payments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-design-section" class="py-12">
+            <div class="page-container">
+                <div class="feature-layout flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+                    <div class="w-full lg:w-1/2 flex justify-center">
+                        <img class="feature-image max-w-[440px] w-full h-auto object-contain" src="./assets/images/pana.png" alt="How to design your site footer like we did">
+                    </div>
+
+                    <div class="feature-content space-y-6 w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-semibold text-text-neutral leading-tight md:leading-[44px] max-w-[550px]">
+                            How to design your site footer like we did
+                        </h2>
+                        <p class="feature-description text-text-neutral-gray text-sm md:text-[14px] leading-relaxed max-w-[580px]">
+                            Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.
+                        </p>
+                        <button class="btn-primary font-medium">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonial-section" class="bg-bg-silver py-12">
+            <div class="page-container">
+                <div class="testimonial-layout flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+                    <div class="testimonial-image-wrapper w-full lg:w-1/3 flex justify-center lg:justify-start">
+                        <img class="testimonial-image w-[326px] h-[326px] object-cover rounded-lg shadow-sm" src="./assets/images/tesla-image.png" alt="Tesla">
+                    </div>
+
+                    <div class="testimonial-content w-full lg:w-2/3 flex flex-col justify-between">
+                        <p class="text-text-neutral-gray text-sm md:text-base leading-relaxed font-medium">
+                            Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+                        </p>
+
+                        <div class="mt-5">
+                            <h4 class="text-primary text-lg md:text-xl font-semibold">Tim Smith</h4>
+                            <p class="text-[#89939E] text-sm md:text-base mt-1">British Dragon Boat Racing Association</p>
+                        </div>
+
+                        <div class="testimonial-partners flex flex-wrap items-center gap-6 md:gap-8 mt-6">
+                            <div class="testimonial-logos flex items-center flex-wrap gap-6 md:gap-8">
+                                <img class="h-8 md:h-10 w-auto object-contain" src="./assets/icons/Logo.png" alt="Client logo">
+                                <img class="h-8 md:h-10 w-auto object-contain" src="./assets/icons/Logo (1).png" alt="Client logo">
+                                <img class="h-8 md:h-10 w-auto object-contain" src="./assets/icons/Logo (2).png" alt="Client logo">
+                                <img class="h-8 md:h-10 w-auto object-contain" src="./assets/icons/Logo (3).png" alt="Client logo">
+                                <img class="h-8 md:h-10 w-auto object-contain" src="./assets/icons/Logo (4).png" alt="Client logo">
+                                <img class="h-8 md:h-10 w-auto object-contain" src="./assets/icons/Logo (5).png" alt="Client logo">
+                            </div>
+
+                            <a href="#clients-section" class="meet-customers flex items-center gap-2 text-primary font-semibold text-base md:text-lg hover:text-[#3d9140] transition-colors duration-300">
+                                <span>Meet all customers</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog-section" class="py-16">
+            <div class="page-container">
+                <div class="text-center max-w-[628px] mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-semibold text-text-neutral leading-tight md:leading-[44px]">
+                        Caring is the new marketing
+                    </h2>
+                    <p class="blog-description text-text-neutral-gray text-sm md:text-base mt-3 leading-relaxed">
+                        The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lots more.
+                    </p>
+                </div>
+
+                <div class="blog-cards-container grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 mb-10"></div>
+            </div>
+        </section>
+
+        <section id="cta-section" class="bg-bg-silver py-12 md:py-16">
+            <div class="page-container text-center">
+                <h2 class="text-4xl md:text-5xl lg:text-[64px] font-semibold text-[#263238] leading-tight lg:leading-[1.125] max-w-[800px] mx-auto">
+                    Pellentesque suscipit fringilla libero eu.
+                </h2>
+                <div class="mt-8">
+                    <button class="btn-primary font-medium">
+                        <span>Get a Demo</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#263238] text-white  md:py-16">
+        <div class="page-container">
+            <div class="footer-content flex flex-col md:flex-row justify-between gap-12 lg:gap-8">
+                <div class="footer-brand flex flex-col justify-between max-w-[350px]">
+                    <div>
+                        <a href="#hero-section" class="inline-flex items-center gap-2">
+                            <img class="h-7 w-auto [filter:brightness(0)_invert(1)]" src="./assets/images/Logo.png" alt="Nexcent">
+                        </a>
+                        <div class="mt-8 text-sm text-[#F5F7FA]/70 space-y-2">
+                            <p>Copyright &copy; 2020 Nexcent ltd.</p>
+                            <p>All rights reserved</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 mt-8">
+                        <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full bg-[#37474F] hover:bg-primary transition-colors duration-300 flex items-center justify-center text-sm text-white">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Website" class="w-8 h-8 rounded-full bg-[#37474F] hover:bg-primary transition-colors duration-300 flex items-center justify-center text-sm text-white">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="w-8 h-8 rounded-full bg-[#37474F] hover:bg-primary transition-colors duration-300 flex items-center justify-center text-sm text-white">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-full bg-[#37474F] hover:bg-primary transition-colors duration-300 flex items-center justify-center text-sm text-white">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-6 text-white">Company</h4>
+                        <ul class="space-y-3 text-sm text-[#F5F7FA]/75">
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">About us</a></li>
+                            <li><a href="#blog-section" class="hover:text-primary transition-colors duration-300">Blog</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Contact us</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Pricing</a></li>
+                            <li><a href="#testimonial-section" class="hover:text-primary transition-colors duration-300">Testimonials</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-6 text-white">Support</h4>
+                        <ul class="space-y-3 text-sm text-[#F5F7FA]/75">
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Help center</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Terms of service</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Legal</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Privacy policy</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors duration-300">Status</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-newsletter">
+                        <h4 class="text-xl font-semibold mb-6 text-white">Stay up to date</h4>
+                        <div class="newsletter-form relative w-full md:max-w-[255px]">
+                            <input type="email" placeholder="Your email address" aria-label="Your email address" class="w-full bg-[#515B60] text-sm text-white placeholder-[#D9DBE1] rounded-lg px-4 py-3 pr-10 focus:outline-none focus:ring-1 focus:ring-primary">
+                            <button type="button" aria-label="Subscribe" class="absolute right-3 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors duration-300 cursor-pointer">
+                                <i class="fa-regular fa-paper-plane text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script/index.js"></script>
+</body>
+
+</html>
